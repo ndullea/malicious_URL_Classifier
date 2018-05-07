@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-#Use Bag of Words approach for tokenizing
+#Function to separate urls into tokens
 def makeTokens(input):
 	tokenList = []
 
