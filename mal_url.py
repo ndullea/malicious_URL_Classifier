@@ -29,7 +29,7 @@ def makeTokens(input):
 	#Turn to set to remove redundancies and back to List
 	tokenList = list(set(tokenList))
 
-	#Remove com and com' from tokenList
+	#Remove com and from tokenList
 	if 'com' in tokenList:
 		tokenList.remove('com')
 
