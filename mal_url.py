@@ -32,8 +32,6 @@ def makeTokens(input):
 	#Remove com and com' from tokenList
 	if 'com' in tokenList:
 		tokenList.remove('com')
-	if "com'" in tokenList:
-		tokenList.remove("com'")
 
 	return tokenList
 
