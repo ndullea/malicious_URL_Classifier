@@ -46,8 +46,8 @@ def setupDataAndClassifier():
 	alldata = np.array(data)
 	random.shuffle(alldata)
 
-	#Setup Training and Testing Data
-	y = [d[1] for d in alldata]
+	#Separate Labels and URLs into lists
+	y = [d[1] for d in alldata] #labels ('good' or 'bad')
 	urls = [d[0] for d in alldata]
 	#tfidfvectorizer is equivalent to countvectorizer follower by tfidf transform
 	vectorizer = TfidfVectorizer(tokenizer=makeTokens)
@@ -56,7 +56,7 @@ def setupDataAndClassifier():
 
 	#Create Logistic Regression Model
 	lgs = LogisticRegression()
-	#Train Logisitc Regression Model
+	#Train Logistic Regression Model
 	lgs.fit(X_train, y_train)
 	#Print the Score
 	print(lgs.score(X_test, y_test))
